@@ -10,7 +10,19 @@ Install chezmoi using their [instructions](https://github.com/twpayne/chezmoi/bl
 curl -sfL https://git.io/chezmoi
 ```
 
-and drop the dotfiles
+Potentially add `~/bin` to path:
+
+```shell
+export PATH=~/bin:$PATH
+```
+
+or with fish:
+
+```shell
+set -agx $HOME/bin
+```
+
+and drop the dotfiles:
 
 ```shell
 chezmoi init --apply https://github.com/lewisacidic/dotfiles
