@@ -1,0 +1,48 @@
+[user]
+	name = Rich Lewis
+	email = 2941720+lewisacidic@users.noreply.github.com
+	signingkey = E3701B1B36FA629CD707A6DF3879CC0B8FDE811F
+[commit]
+	gpgsign = true
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+	insteadOf = git@github.com:
+	insteadOf = github:
+	insteadOf = gh:
+[url "https://github.com/lewisacidic/"]
+	insteadOf = gh:me/
+[url "https://gitlab.com/"]
+	insteadOf = git://gitlab.com/
+	insteadOf = git@gitlab.com:
+	insteadOf = gitlab:
+	insteadOf = gl:
+[url "https://bitbucket.org/"]
+	insteadOf = git://bitbucket.org/
+	insteadOf = git@bitbucket.org:
+	insteadOf = bitbucket:
+	insteadOf = bb:
+[url "http://gitlab.vernalis.com/"]
+	insteadOf = git://gitlab.vernalis.com/
+	insteadOf = git@gitlab.vernalis.com/
+	insteadOf = gitlabvernalis:
+	insteadOf = glver:
+	insteadOf = ver:
+[url "http://gitlab.vernalis.com/r.lewis/"]
+	insteadOf = ver:me/
+[core]
+	editor = nvim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[format]
+	pretty = %C(auto)%h%Creset %Cblue%an%Creset %C(magenta)[%G?]%Creset: %s %Cgreen(%ar)%Creset
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+    # helper = !pass-git-helper $@
+[init]
+	templatedir = /home/rich/.git-templates/default
+[alias]
+	recommit = !git commit -eF $(git rev-parse --git-dir)/COMMIT_EDITMSG
+    dad = !curl https://icanhazdadjoke.com && git add
