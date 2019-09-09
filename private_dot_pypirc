@@ -1,0 +1,12 @@
+[distutils]
+index-servers=
+   pypi
+   testpypi
+
+[pypi]
+username: lewisacidic
+
+
+[testpypi]
+repository: https://test.pypi.org/
+username: lewisacidic
